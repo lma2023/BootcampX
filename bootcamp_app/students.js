@@ -22,7 +22,6 @@ const values = [`%${cohortName}%`, limit];
 
 pool.query(queryString, values)
 .then(res => {
-  //console.log(res.rows);
   res.rows.forEach(user => {
     console.log(`${user.student_name} has an id of ${user.student_id} and was in the ${user.cohort_name} cohort`);
   })
